@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<section class="bg-[#596551] h-12">
+  <div class="flex items-center h-full w-full justify-around">
+    <div class="flex h-full text-white items-center">
+      <p>Ici logo</p>
+    </div>
+    <div class="flex items-center h-full gap-6">
+      @for (element of navElements; track $index) {
+        <a [routerLink]="element.link" class="text-white">
+          {{ element.name }}</a>
+      }
+    </div>
+  </div>
+</section>
