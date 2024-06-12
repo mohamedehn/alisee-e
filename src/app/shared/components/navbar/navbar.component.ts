@@ -11,13 +11,15 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-  public image = '';
+  public image: string = '';
+  public headerName: string = "Alisée Eggermont";
   constructor() {}
   public navElements = [
     { name: 'Accueil', link: '/home' },
-    { name: 'Thérapies', link: '/therapy' },
-    { name: 'Tarifs', link: '/tariff' },
-    { name: 'Contact', link: '/contact' },
-    { name: 'Votre Psychanalyste', link: '/login' },
+    { name: 'Thérapie', link: '/therapy' },
+    { name: 'Votre thérapeute', link: '/psy' },
+    { name: 'Info pratiques', link: '/infos' },
+    { name: 'Prendre rendez-vous', link: '/contact' },
+
   ];
 }

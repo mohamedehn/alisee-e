@@ -1,8 +1,11 @@
-<section class=" h-12 fixed w-full flex bg-[#9ca48d]">
-  <div class="flex items-center h-full justify-end w-[90%]">
+<section class=" h-20 fixed w-full flex bg-[#9CA48D] px-10 gap-20 text-black items-center justify-around">
+  <div class="flex items-center w-3/4 h-full headerName text-4xl max-w-72">
+    {{headerName}}
+  </div>
+  <div class="flex items-center h-full w-full text-lg font-semibold justify-end">
     <div class="flex items-center h-full gap-6">
       @for (element of navElements; track $index) {
-        <a [routerLink]="element.link" class="text-white hover:text-black">
+        <a [routerLink]="element.link" class="hover:text-white">
           {{ element.name }}</a>
       }
     </div>

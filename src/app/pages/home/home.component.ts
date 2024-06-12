@@ -11,9 +11,11 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   public name: string = 'Alisée Eggermont';
   public introduction: string = 'Psychanalyste à Lyon';
-  public description: string =
-    'Je suis psychanalyste à Lyon. Je vous propose des consultations en cabinet pour vous aider à surmonter vos problèmes psychologiques et à retrouver un équilibre psychique. Je suis à votre écoute pour vous aider à comprendre et à résoudre vos difficultés.';
-  public psyTitle: string = 'Psychanalyse';
+  public description: string = "";
+  public homeImg: string = 'assets/homes.png';
+  public officeImg: string = 'assets/office.jpg';
+  public psyTitle: string = 'Thérapie';
+  public therapyst: string = 'Votre thérapeute';
 
   constructor() { }
 

@@ -1,47 +1,47 @@
 <section class="flex flex-col w-full h-full">
-  <div class="flex w-full h-full justify-center items-center bg-[#9ca48d] pb-20">
-    <div class="flex flex-col justify-center items-center w-2/3 gap-10 mt-40">
-      <h2 class="text-2xl font-bold tracking-tight ">{{name}}</h2>
+
+  <div class="flex w-full h-screen justify-center items-center bg-[#9CA48D] pb-20">
+    <div class="flex flex-col justify-center items-center w-full gap-10 bg-[#ded9d5] h-[90%] textured-background">
+      <h2 class="text-6xl font-bold tracking-tight headerName">{{name}}</h2>
       <h3 class="text-xl font-medium">{{introduction}}</h3>
-      <p class="text-justify w-3/4 text-lg leading-8">{{description}}</p>
+      <img src="{{homeImg}}" alt="" width="500px" height="400px" class="z-100 object-none">
     </div>
   </div>
 
-  <div class="px-6 py-24 sm:py-32 lg:px-8">
+  <div class="px-6 py-24 sm:py-32 lg:px-8 bg-[#9CA48D] h-screen">
     <div class="mx-auto max-w-7xl text-center">
-      <h2 class="text-xl font-bold tracking-tight sm:text-2xl">{{psyTitle}}</h2>
-      <div class="mt-6 text-lg leading-8 text-justify">
-        <span>La psychanalyse est une méthode thérapeutique et une théorie de l'esprit humain, développée par
-          Sigmund Freud à la fin du XIXe siècle. Elle repose sur l'exploration de l'inconscient, une partie
-          de notre esprit qui influence nos pensées, comportements et émotions, souvent à notre insu.</span>
-        <p class="font-semibold mt-6">Objectifs de la Psychanalyse</p>
-        <p class="font-medium mt-1">Compréhension de l'Inconscient :</p> La psychanalyse vise à rendre conscient ce qui est inconscient,
-        permettant aux individus de mieux comprendre les motivations profondes derrière leurs actions et
-        sentiments.
-        <p class="font-medium mt-1">Résolution des Conflits Internes :</p>
-        En identifiant et en abordant les conflits psychiques enfouis,
-        la psychanalyse cherche à réduire les symptômes psychologiques et à améliorer le bien-être
-        émotionnel.
-        <p class="font-medium mt-1">Développement Personnel :</p> Elle encourage un développement personnel et une introspection
-        approfondie, aidant les individus à atteindre une meilleure connaissance de soi.
-        <p class="font-semibold mt-6">Méthodes Utilisées : </p>
-        <p class="font-medium mt-1">L'Association Libre :</p>
-        Les patients sont encouragés à exprimer librement leurs
-        pensées sans censure, permettant au psychanalyste de détecter des patterns ou des thèmes récurrents.
-        <p class="font-medium mt-1">L'Interprétation des Rêves :</p> Les rêves sont analysés comme des manifestations de désirs inconscients.
-        <p class="font-medium mt-1">L'Analyse des Actes Manqués : </p>Les erreurs apparemment insignifiantes (lapsus, oublis) sont
-        explorées pour révéler des pensées inconscientes.
-        Applications
-        La psychanalyse est utilisée pour traiter divers troubles mentaux, tels que la dépression,
-        l'anxiété, les troubles de la personnalité et les traumatismes. Elle est également appliquée dans
-        l'analyse de la culture, de la littérature, et de l'art, offrant une perspective profonde sur la
-        nature humaine.
-        <p class="font-semibold mt-6">Conclusion</p>
-        La psychanalyse, avec son accent sur l'exploration de l'inconscient et des conflits internes,
-        continue d'influencer la psychologie moderne et d'offrir des outils précieux pour comprendre et
-        améliorer la condition humaine.
-        Pour en savoir plus sur la psychanalyse et trouver un professionnel qualifié, consultez notre
-        section dédiée.
+      <h2 class="text-2xl font-bold tracking-tight sm:text-2xl">{{psyTitle}}</h2>
+      <div class="mt-8 text-lg leading-8 text-justify flex gap-10 justify-center">
+        <div class="w-1/2 m-auto">
+          <img src="{{officeImg}}" alt="office" class="rounded-xl">
+        </div>
+        <div class="w-1/2 bg-[#474747] rounded-xl">
+          <p class="text-justify text-white mx-4 my-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint omnis ullam provident, error pariatur eum numquam repudiandae sapiente. Aspernatur, ducimus. Ullam amet hic quas et! Aliquid quo ullam culpa.
+            Aliquid debitis facere nulla, quo commodi magni, consequuntur esse alias fugiat mollitia quis provident repellat odit totam velit eligendi. Aut assumenda eligendi voluptatem magni ullam tempore laudantium ad possimus et.
+            Natus facere dolorum error dolor cupiditate sint fuga et incidunt, sed ut harum repellendus nulla ex ipsa quod sit! Culpa maxime magnam repudiandae cum eveniet aspernatur accusamus neque hic saepe?
+            Animi quia accusantium aliquam ipsa nihil adipisci officia, illum quas corporis rerum quibusdam, voluptatem consequuntur, vel qui explicabo cupiditate. Natus ipsum delectus illum culpa adipisci, nostrum doloribus optio architecto voluptates.
+            Delectus, et! Numquam, obcaecati. Rem voluptates accusamus laborum aspernatur a. Architecto laborum nulla placeat ut! Debitis, qui beatae at, ducimus nemo blanditiis incidunt est et, dolore esse reprehenderit adipisci ut.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="px-6 py-24 sm:py-32 lg:px-8 bg-[#9ca48d96] h-screen">
+    <div class="mx-auto max-w-8xl text-center bg-[#F0ECE9] h-[550px]">
+      <h2 class="text-2xl font-bold tracking-tight sm:text-2xl pt-5">{{therapyst}}</h2>
+      <div class="mt-8 text-lg leading-8 text-justify flex gap-10 justify-center max-w-6xl m-auto h-[80%]">
+        <div class="w-1/2 bg-[white] rounded-xl">
+          <p class="text-justify text-[#596551] mx-4 my-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint omnis ullam provident, error pariatur eum numquam repudiandae sapiente. Aspernatur, ducimus. Ullam amet hic quas et! Aliquid quo ullam culpa.
+            Aliquid debitis facere nulla, quo commodi magni, consequuntur esse alias fugiat mollitia quis provident repellat odit totam velit eligendi. Aut assumenda eligendi voluptatem magni ullam tempore laudantium ad possimus et.
+            Natus facere dolorum error dolor cupiditate sint fuga et incidunt, sed ut harum repellendus nulla ex ipsa quod sit! Culpa maxime magnam repudiandae cum eveniet aspernatur accusamus neque hic saepe?
+          </p>
+        </div>
+        <div class="w-1/2 m-auto">
+          <img src="{{officeImg}}" alt="office" class="rounded-xl">
+        </div>
       </div>
     </div>
   </div>
