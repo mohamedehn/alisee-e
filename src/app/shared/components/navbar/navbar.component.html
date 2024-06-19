@@ -1,4 +1,4 @@
-<section class="z-10 h-20 fixed w-full flex bg-[#9CA48D] px-10 text-black items-center justify-between">
+<section class="z-100 h-20 fixed w-full flex bg-[#9CA48D] px-10 text-black items-center justify-between">
   <div class="flex items-center headerName text-4xl max-w-80 w-full">
     {{headerName}}
   </div>
@@ -18,7 +18,7 @@
   </div>
 </section>
 
-<div *ngIf="menuOpen" class="fixed inset-0 bg-[#9CA48D] z-20 flex flex-col items-center justify-start pt-8 h-full lg:hidden">
+<div *ngIf="menuOpen" class="z-100 fixed inset-0 bg-[#9CA48D] flex flex-col items-center justify-start pt-8 h-full lg:hidden">
   <div class="flex w-full justify-end pr-10">
     <button (click)="toggleMenu()" class="focus:outline-none">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
