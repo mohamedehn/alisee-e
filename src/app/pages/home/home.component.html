@@ -1,6 +1,6 @@
 <section class="flex flex-col w-full h-full">
 
-  <div class="flex w-full h-screen justify-center items-center bg-[#9CA48D] pb-20">
+  <div class="flex w-full h-screen justify-center items-center bg-[#9CA48D] pb-20" id="home">
     <div class="flex flex-col justify-center items-center w-full gap-10 bg-[#ded9d5] h-[90%] textured-background">
       <h2 class="text-6xl font-bold tracking-tight headerName">{{name}}</h2>
       <h3 class="text-xl font-medium">{{introduction}}</h3>
@@ -8,7 +8,7 @@
     </div>
   </div>
 
-  <div class="px-6 py-24 sm:py-32 lg:px-8 bg-[#9CA48D] h-screen">
+  <div class="px-6 py-24 sm:py-32 lg:px-8 bg-[#9CA48D] h-screen" id="therapy">
     <div class="mx-auto max-w-7xl text-center">
       <h2 class="text-2xl font-bold tracking-tight sm:text-2xl">{{psyTitle}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify flex gap-10 justify-center">
@@ -21,14 +21,13 @@
             Aliquid debitis facere nulla, quo commodi magni, consequuntur esse alias fugiat mollitia quis provident repellat odit totam velit eligendi. Aut assumenda eligendi voluptatem magni ullam tempore laudantium ad possimus et.
             Natus facere dolorum error dolor cupiditate sint fuga et incidunt, sed ut harum repellendus nulla ex ipsa quod sit! Culpa maxime magnam repudiandae cum eveniet aspernatur accusamus neque hic saepe?
             Animi quia accusantium aliquam ipsa nihil adipisci officia, illum quas corporis rerum quibusdam, voluptatem consequuntur, vel qui explicabo cupiditate. Natus ipsum delectus illum culpa adipisci, nostrum doloribus optio architecto voluptates.
-            Delectus, et! Numquam, obcaecati. Rem voluptates accusamus laborum aspernatur a. Architecto laborum nulla placeat ut! Debitis, qui beatae at, ducimus nemo blanditiis incidunt est et, dolore esse reprehenderit adipisci ut.
           </p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="px-6 py-24 sm:py-32 lg:px-8 bg-[#9ca48d96] h-screen">
+  <div class="px-6 py-24 sm:py-32 lg:px-8 bg-[#9ca48d96] h-screen" id="psy">
     <div class="mx-auto max-w-8xl text-center bg-[#F0ECE9] h-[550px]">
       <h2 class="text-2xl font-bold tracking-tight sm:text-2xl pt-5">{{therapyst}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify flex gap-10 justify-center max-w-6xl m-auto h-[80%]">
@@ -44,6 +43,28 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="px-6 py-24 sm:py-32 lg:px-8 bg-[#9ca48d60] h-screen" id="infos">
+    <div class="mx-auto max-w-8xl text-center h-[550px]">
+      <h2 class="text-2xl font-bold tracking-tight sm:text-2xl pt-5">{{info}}</h2>
+      <div class="mt-8 text-lg leading-8 text-justify flex gap-10 justify-center max-w-6xl m-auto h-[80%]">
+        <div class="w-1/2 m-auto z-0">
+           <app-map></app-map>
+        </div>
+        <div class="w-1/2 bg-[white] rounded-xl">
+          @for (element of infos; track $index) {
+            <p class="text-justify text-[#596551] mx-4 my-4">
+            {{element.name}} : {{element.element}} <br>
+          </p>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex w-full h-screen justify-center bg-[#9CA48D] pb-20" id="contact">
+    <h2 class="text-2xl font-bold tracking-tight sm:text-2xl pt-28">{{rdv}}</h2>
   </div>
 
 </section>

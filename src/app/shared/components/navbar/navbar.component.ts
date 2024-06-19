@@ -7,19 +7,25 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink, CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  styleUrls: ['./navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
   public image: string = '';
   public headerName: string = "Alisée Eggermont";
-  constructor() {}
-  public navElements = [
-    { name: 'Accueil', link: '/home' },
-    { name: 'Thérapie', link: '/therapy' },
-    { name: 'Votre thérapeute', link: '/psy' },
-    { name: 'Info pratiques', link: '/infos' },
-    { name: 'Prendre rendez-vous', link: '/contact' },
+  public menuOpen: boolean = false;
 
+  constructor() {}
+
+  public navElements = [
+    { name: 'Accueil', link: '#home' },
+    { name: 'Thérapie', link: '#therapy' },
+    { name: 'Votre thérapeute', link: '#psy' },
+    { name: 'Info pratiques', link: '#infos' },
+    { name: 'Prendre rendez-vous', link: '#contact' },
   ];
+
+  public toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
 }
