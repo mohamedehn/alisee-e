@@ -19,32 +19,29 @@ export class HomeComponent implements OnInit {
   public therapyst: string = 'Votre thérapeute';
   public info: string = 'Informations pratiques';
   public rdv: string = 'Prendre rendez-vous';
-  public infos: any = [
-    {
-      name: 'Adresse',
-      element : '105 Rue Duguesclin, 69006 Lyon',
+  public infos: any = {
+    email: 'contact@alisee-eggermont-psy.fr',
+    telephone: '06 82 37 02 51',
+    adresse: '105 rue Duguesclin, 69006 Lyon',
+    accederAuCabinet: {
+      metro: 'Métro A - Foch',
+      bus: [
+        'BUS 27 - Foch',
+        'BUS 38 - Mairie du 6ème',
+        'BUS C4 - Edgar Quinet'
+      ]
     },
-    {
-      name: 'Téléphone',
-      element : '06 06 06 06 06',
+    tarifs: {
+      psychotherapieDeSoutien: '60 euros',
+      psychanalyse: '60 euros',
+      note: 'Afin de continuer à rendre la psychanalyse accessible au plus grand nombre, il est possible d’adapter le prix des séances en fonction de votre situation.'
     },
-    {
-      name: 'Email',
-      element: 'contact@contact.fr',
-    },
-    {
-      name: 'Horaires',
-      element: 'Du lundi au vendredi de 9h à 19h',
-    },
-    {
-      name: 'Prix',
-      element: 'Prix de la consultation : 50€',
-    },
-    {
-      name: 'Paiement',
-      element: 'Paiement par chèque ou espèces',
-    },
-  ]
+    dureeDeLaSeance: '50 minutes',
+    modeDeReglement: [
+      'Chèque,',
+      'Espèces'
+    ]
+  };
 
   constructor() { }
 
