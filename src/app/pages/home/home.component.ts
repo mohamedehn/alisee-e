@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
   public introduction: string = 'Psychanalyste à Lyon';
   public description: string = "";
   public homeImg: string = 'assets/homes.png';
-  public officeImg: string = 'assets/office.jpg';
+  public aliseeImg: string = 'assets/alisee.png';
   public psyTitle: string = 'Thérapie';
   public therapyst: string = 'Votre thérapeute';
   public info: string = 'Informations pratiques';
@@ -43,6 +43,15 @@ export class HomeComponent implements OnInit, AfterViewInit{
       'Espèces'
     ]
   };
+
+  public therapystInfos: any = {
+    intro1: "Qui suis-je ?",
+    text1: "Je suis psychanalyste, formée au sein de la Fédération Freudienne de Psychanalyse (FFDP)  pendant cinq ans. Cet apprentissage, à la fois théorique et pratique, a été complété par une psychanalyse personnelle et didactique de plusieurs années. Mon activité est supervisée par un psychanalyste de la FFDP, garantissant ainsi le respect du code déontologique.",
+    text2: "J'accueille adultes et adolescents dans mon cabinet situé à Lyon 6ème, pour les accompagner dans un parcours psychanalytique, une psychothérapie de soutien ou une psychothérapie analytique.",
+    intro2: "Mon approche thérapeutique",
+    text3: "Ensemble, nous explorerons votre psychisme pour dénouer les fils qui influencent vos pensées, vos émotions et vos comportements actuels. L'objectif est de vous permettre d'accéder à un mieux-être durable, en favorisant votre épanouissement personnel.",
+    text4: "Au cœur de la thérapie, une relation de confiance se tisse entre le patient et le psychanalyste. C'est dans ce climat que vous pourrez explorer votre psyché en profondeur, sans crainte ni retenue. Je suis là pour vous accompagner à chaque étape de ce cheminement, en vous offrant un espace d'écoute attentive et bienveillante. Mon engagement est de vous guider avec respect, en veillant à ce que vous vous sentiez toujours à l'aise."
+  }
 
   constructor(private animationService: AnimationService, private cdRef: ChangeDetectorRef) { }
 
