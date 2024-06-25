@@ -2,15 +2,15 @@
 
   <div class="flex w-full h-screen justify-center items-center bg-[#9CA48D] md:pb-20" id="home">
     <div class="flex flex-col justify-center items-center w-full gap-10 bg-[#ded9d5] h-[90%] textured-background">
-      <h2 class="text-4xl md:text-6xl font-bold tracking-tight headerName2">{{name}}</h2>
-      <h3 class="text-xl font-medium">{{introduction}}</h3>
-      <img src="{{homeImg}}" alt="" width="500px" height="400px" class="z-100 object-contain md:object-none">
+      <h2 class="an-1 text-4xl md:text-6xl font-bold tracking-tight headerName2">{{name}}</h2>
+      <h3 class="an-1 text-xl font-medium">{{introduction}}</h3>
+      <img src="{{homeImg}}" alt="" width="500px" height="400px" class="an-1 z-100 object-contain md:object-none">
     </div>
   </div>
 
-  <div class="px-6 py-24 sm:py-32 lg:px-8 bg-[#9CA48D] h-full md:h-screen" id="therapy">
+  <div class="px-6 lg:px-8 bg-[#9CA48D] h-full md:h-screen" id="therapy">
     <div class="mx-auto max-w-7xl text-center">
-      <h2 class="text-2xl font-bold tracking-tight sm:text-2xl">{{psyTitle}}</h2>
+      <h2 class="text-2xl ml-40 font-bold tracking-tight sm:text-3xl">{{psyTitle}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify bloc md:flex gap-10 justify-center">
         <div class="w-full md:w-1/2 m-auto">
           <img src="{{officeImg}}" alt="office" class="rounded-xl">
@@ -27,9 +27,9 @@
     </div>
   </div>
 
-  <div class="px-6 py-24 sm:py-32 lg:px-8 bg-[#9ca48d96] h-full md:h-screen" id="psy">
+  <div class="px-6 lg:px-8 bg-[#9ca48d96] h-full md:h-screen" id="psy">
     <div class="mx-auto max-w-8xl text-center bg-[#F0ECE9] h-full md:h-[550px]">
-      <h2 class="text-2xl font-bold tracking-tight sm:text-2xl pt-5">{{therapyst}}</h2>
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mr-72 pt-5">{{therapyst}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify bloc md:flex gap-10 justify-center max-w-6xl m-auto h-[80%]">
         <div class="w-[90%] md:w-1/2 bg-[white] rounded-xl m-auto">
           <p class="text-justify text-[#596551] mx-4 my-4">
@@ -45,9 +45,9 @@
     </div>
   </div>
 
-  <div class="px-6 py-20 sm:py-28 lg:px-8 bg-[#9ca48d60] h-full md:h-screen" id="infos">
+  <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full md:h-screen" id="infos">
     <div class="mx-auto max-w-8xl text-center h-full">
-      <h2 class="text-2xl font-bold tracking-tight sm:text-2xl pt-5">{{info}}</h2>
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl ml-[22rem] pt-5">{{info}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify bloc md:flex gap-10 justify-center max-w-8xl m-auto h-full">
         <div class="w-full md:w-1/2 m-auto z-[-1]">
            <app-map></app-map>

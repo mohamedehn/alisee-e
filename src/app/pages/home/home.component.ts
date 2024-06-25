@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MapComponent } from '../../shared/components/map/map.component';
+import { AnimationService } from '../../animation.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { MapComponent } from '../../shared/components/map/map.component';
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit{
   public name: string = 'Alisée Eggermont';
   public introduction: string = 'Psychanalyste à Lyon';
   public description: string = "";
@@ -43,9 +44,20 @@ export class HomeComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor(private animationService: AnimationService, private cdRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     console.log('HomeComponent');
+  }
+
+  ngAfterViewInit(): void {
+    this.animationService.observeAndAnimate('.an-1');
+    const imageElement = document.querySelectorAll('.fade-in');
+    imageElement?.forEach((element) => {
+      element.addEventListener('load', () => {
+        element.classList.add('loaded');
+      });
+    });
+    this.cdRef.detectChanges();
   }
 }
