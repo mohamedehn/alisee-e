@@ -8,9 +8,9 @@
     </div>
   </div>
 
-  <div class="px-6 lg:px-8 bg-[#9CA48D] h-full md:h-screen" id="therapy">
+  <div class="px-6 lg:px-8 bg-[#9CA48D] h-full md:h-screen w-full" id="therapy">
     <div class="mx-auto max-w-7xl text-center">
-      <h2 class="text-2xl ml-40 font-bold tracking-tight sm:text-3xl">{{psyTitle}}</h2>
+      <h2 class="text-2xl mt-20 lg:mt-0 lg:ml-40 font-bold tracking-tight sm:text-3xl">{{psyTitle}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify bloc md:flex gap-10 justify-center">
         <div class="w-full md:w-1/2 m-auto">
           <img src="{{homeImg}}" alt="office" class="rounded-xl">
@@ -31,13 +31,13 @@
     <div class="mx-auto max-w-8xl text-center bg-[#F0ECE9] h-full md:h-auto">
       <h2 class="text-2xl font-bold tracking-tight sm:text-3xl pt-5">{{therapyst}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify bloc xl:flex gap-10 justify-center w-[95%] m-auto">
-        <div class="grid-cols-2 flex md:w-2/3 rounded-xl m-auto mb-10">
-          <div class="w-[48%]">
+        <div class="lg:grid-cols-2 flex lg:flex-row flex-col w-full lg:w-2/3 rounded-xl m-auto mb-10">
+          <div class="lg:w-[48%]">
             <p class="text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro1}}</p>
             <p class="text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text1}}</p>
             <p class="text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text2}}</p>
           </div>
-          <div class="w-[52%]">
+          <div class="lg:w-[52%]">
             <p class="text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro2}}</p>
             <p class="text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text4}}</p>
             <p class="text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text3}}</p>
@@ -50,14 +50,14 @@
     </div>
   </div>
 
-  <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full md:h-screen" id="infos">
+  <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full lg:h-screen w-full" id="infos">
     <div class="mx-auto max-w-8xl text-center h-full">
-      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl ml-[22rem] pt-5">{{info}}</h2>
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl lg:ml-[22rem] mt-10 lg:mt-0 pt-5">{{info}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify bloc md:flex gap-10 justify-center max-w-8xl m-auto h-full">
         <div class="w-full md:w-1/2 m-auto z-[-1]">
            <app-map></app-map>
         </div>
-        <div class="w-full md:w-1/2 bg-[white] rounded-xl flex flex-col">
+        <div class="w-full md:w-1/2 bg-[white] rounded-xl flex flex-col mt-10 lg:mt-0">
           <div class="w-[95%] m-auto flex flex-col gap-1">
             <p><span class="font-bold">Email: </span>{{ infos.email }}</p>
             <p><span class="font-bold">Telephone: </span>{{ infos.telephone }}</p>
