@@ -6,22 +6,17 @@
       <h3 class="an-1 text-xl font-medium">{{introduction}}</h3>
       <img src="{{homeImg2}}"
            alt=""
-           width="800px"
-           height="700px"
+           width="600px"
+           height="500px"
            class="an-1 z-100 object-contain">
     </div>
   </div>
 
   <div class="px-6 lg:px-8 bg-[#9CA48D] h-full md:h-screen w-full bloc lg:flex lg:flex-col"
        id="therapy">
-    <div class="mx-auto max-w-7xl text-center h-full pt-20">
-      <h2 class="an-1 text-2xl mt-20 lg:mt-0 lg:ml-40 font-bold tracking-tight sm:text-3xl">{{psyTitle}}</h2>
+    <div class="mx-auto max-w-7xl text-center h-full">
+      <h2 class="an-1 text-2xl mt-5 lg:mt-0 lg:ml-40 font-bold tracking-tight sm:text-3xl">{{psyTitle}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify bloc md:flex gap-10 justify-center">
-        <div class="w-full md:w-1/2 m-auto">
-          <img src="{{homeImg}}"
-               alt="office"
-               class="rounded-xl">
-        </div>
         <div class="w-full md:w-1/2 bg-[#474747] rounded-xl">
           <p class="an-1 text-justify text-white mx-4 my-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint omnis ullam provident, error pariatur eum numquam repudiandae sapiente. Aspernatur, ducimus. Ullam amet hic quas et! Aliquid quo ullam culpa. Aliquid debitis facere nulla, quo commodi magni, consequuntur esse alias fugiat mollitia quis provident repellat odit totam velit eligendi. Aut assumenda eligendi voluptatem magni ullam tempore laudantium ad possimus et. Natus facere dolorum error dolor cupiditate sint fuga et incidunt, sed ut harum repellendus nulla ex ipsa quod sit! Culpa maxime magnam repudiandae cum eveniet aspernatur accusamus neque hic saepe? Animi quia accusantium aliquam ipsa nihil adipisci officia, illum quas corporis rerum quibusdam, voluptatem consequuntur, vel qui explicabo cupiditate. Natus ipsum delectus illum culpa adipisci, nostrum doloribus optio architecto voluptates. </p>
         </div>
@@ -29,29 +24,37 @@
     </div>
   </div>
 
-  <div class="px-6 lg:px-8 bg-[#9ca48d96] h-full lg:h-screen pt-20 md:pt-0"
+  <div class="px-6 lg:px-8 bg-[#9ca48d96] h-full lg:h-screen pt-20 md:pt-0 lg:flex lg:flex-col justify-center"
        id="psy">
-    <div class="mx-auto max-w-8xl text-center bg-[#F0ECE9] h-full lg:h-screen pt-20">
+    <div class="mx-auto max-w-8xl text-center bg-[#F0ECE9] h-full lg:h-screen">
+    <div class="flex flex-col w-full h-full">
       <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl pt-5">{{therapyst}}</h2>
-      <div class="mt-8 text-lg leading-8 text-justify bloc lg:flex gap-10 justify-center w-[95%] m-auto">
-        <div class="lg:grid-cols-2 flex h-full lg:flex-row flex-col w-full lg:w-2/3 rounded-xl m-auto mb-10">
-          <div class="lg:w-[48%]">
+      <div class="h-full text-lg leading-8 text-justify bloc lg:flex gap-10 justify-center w-full">
+        <div class="items-center lg:grid-cols-2 flex h-full lg:flex-row flex-col w-full lg:w-2/3 rounded-xl">
+          <div class="lg:w-[47%] flex flex-col justify-center h-full">
             <p class="an-1 text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro1}}</p>
-            <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text1}}</p>
-            <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text2}}</p>
+            <div>
+              <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text1}}</p>
+              <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text2}}</p>
+            </div>
+
           </div>
-          <div class="lg:w-[52%]">
+          <div class="lg:w-[53%] flex flex-col justify-center h-full">
             <p class="an-1 text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro2}}</p>
-            <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text4}}</p>
+            <div>
+              <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text4}}</p>
             <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text3}}</p>
+            </div>
+
           </div>
         </div>
-        <div class="w-[90%] lg:w-1/3 m-auto h-full">
+        <div class="w-[90%] lg:w-1/3 h-full flex items-center m-auto">
           <img src="{{aliseeImg}}"
                alt="alisée"
-               class="">
+               class="pr-3">
         </div>
       </div>
+    </div>
     </div>
   </div>
 
@@ -74,38 +77,38 @@
           <div class="flex flex-col flex-wrap gap-6 border-r-2 border-[#9ca48d60] pr-2">
             <div class="an-1">
               <h4 class="text-[#596551] font-bold">Email :</h4>
-              <p class="mt-2">{{infos.email}}</p>
+              <p class="mt-1 pl-3">{{infos.email}}</p>
             </div>
             <div class="an-1">
               <h4 class="text-[#596551] font-bold">Téléphone :</h4>
-              <p>{{infos.phone}}</p>
+              <p class="pl-3 mt-1">{{infos.phone}}</p>
             </div>
             <div class="an-1">
               <h4 class="text-[#596551] font-bold">Adresse :</h4>
-              <p>{{infos.address}}</p>
+              <p class="pl-3 mt-1">{{infos.address}}</p>
             </div>
             <div class="an-1">
               <h4 class="text-[#596551] font-bold">Accéder au cabinet :</h4>
-              <p>{{infos.office.metro}}</p>
-              <p class="pt-3">{{infos.office.bus1}}</p>
-              <p>{{infos.office.bus2}}</p>
-              <p>{{infos.office.bus3}}</p>
+              <p class="pl-3 mt-1">{{infos.office.metro}}</p>
+              <p class="pt-3 pl-3">{{infos.office.bus1}}</p>
+              <p class="pl-3">{{infos.office.bus2}}</p>
+              <p class="pl-3">{{infos.office.bus3}}</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-6">
             <div>
               <h4 class="text-[#596551] font-bold an-1">Tarifs</h4>
-              <p class="mt-2 an-1">{{infos.tarifs.psychotherapieDeSoutien}}</p>
-              <p class="mt-2 an-1">{{infos.tarifs.psychanalyse}}</p>
-              <p class="mt-2 an-1">{{infos.tarifs.note}}</p>
+              <p class="mt-2 an-1 pl-3 ">{{infos.tarifs.psychotherapieDeSoutien}}</p>
+              <p class="mt-2 an-1 pl-3">{{infos.tarifs.psychanalyse}}</p>
+              <p class="mt-2 an-1 pl-3 text-sm">{{infos.tarifs.note}}</p>
             </div>
             <div class="mt-2">
               <h4 class="text-[#596551] font-bold an-1">Durée de la séance</h4>
-              <p class="an-1">{{infos.dureeDeLaSeance}}</p>
+              <p class="an-1 pl-3">{{infos.dureeDeLaSeance}}</p>
             </div>
             <div class="mt-2">
               <h4 class="text-[#596551] font-bold an-1">Mode de réglement</h4>
-              <p class="an-1">{{infos.modeDeReglement}}</p>
+              <p class="an-1 pl-3">{{infos.modeDeReglement}}</p>
             </div>
           </div>
         </div>
