@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
   public introduction: string = 'Psychanalyste à Lyon';
   public description: string = "";
   public homeImg: string = 'assets/homes.png';
+  public homeImg2: string = 'assets/homes2.png'
   public aliseeImg: string = 'assets/alisee.png';
   public psyTitle: string = 'Thérapie';
   public therapyst: string = 'Votre thérapeute';
