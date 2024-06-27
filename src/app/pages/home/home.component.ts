@@ -11,7 +11,7 @@ import { AnimationService } from '../../animation.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit, AfterViewInit{
-  public name: string = 'Alisée Eggermont';
+  public name: string = 'Nom et Prénom';
   public introduction: string = 'Psychanalyste à Lyon';
   public description: string = "";
   public homeImg: string = 'assets/homes.png';

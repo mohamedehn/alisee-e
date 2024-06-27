@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
 })
 export class NavbarComponent {
   public image: string = '';
-  public headerName: string = "Alisée Eggermont";
+  public headerName: string = "Nom et Prénom";
   public menuOpen: boolean = false;
 
   constructor() {}

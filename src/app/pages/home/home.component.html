@@ -52,42 +52,14 @@
 
   <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full lg:h-screen w-full" id="infos">
     <div class="mx-auto max-w-8xl text-center h-full">
-      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl lg:ml-[22rem] mt-10 lg:mt-0 pt-5">{{info}}</h2>
-      <div class="mt-8 text-lg leading-8 text-justify bloc md:flex gap-10 justify-center max-w-8xl m-auto h-full">
-        <div class="w-full md:w-1/2 m-auto z-[-1]">
-           <app-map></app-map>
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mt-10 lg:mt-0 pt-5">{{info}}</h2>
+      <div class="text-lg leading-8 text-justify bloc md:flex gap-10 justify-center max-w-8xl m-auto h-full">
+        <div class="w-full md:w-1/2 m-auto z-1 h-full flex justify-center items-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.1640674517057!2d4.8476745!3d45.7679021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb150e31e24b%3A0x25dca6ac81c8dab5!2sAlis%C3%A9e%20Eggermont!5e0!3m2!1sfr!2sfr!4v1719434135950!5m2!1sfr!2sfr" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
         </div>
-        <div class="w-full md:w-1/2 bg-[white] rounded-xl flex flex-col mt-10 lg:mt-0">
-          <div class="w-[95%] m-auto flex flex-col gap-1">
-            <p><span class="font-bold">Email: </span>{{ infos.email }}</p>
-            <p><span class="font-bold">Telephone: </span>{{ infos.telephone }}</p>
-            <p><span class="font-bold">Adresse:</span> {{ infos.adresse }}</p>
-
-            <h2 class="font-bold">Accéder au cabinet</h2>
-            <p><span class="font-bold">Metro:</span> {{ infos.accederAuCabinet.metro }}</p>
-            <div class="flex gap-4">
-              <p><span class="font-bold">Bus:</span></p>
-              @for (bus of infos.accederAuCabinet.bus; track $index) {
-                <p class="flex">{{ bus }}</p>
-              }
-            </div>
-            <h2 class="font-bold">Tarifs</h2>
-            <p><span>Psychothérapie de soutien:</span> {{ infos.tarifs.psychotherapieDeSoutien }}</p>
-            <p><span>Psychanalyse:</span> {{ infos.tarifs.psychanalyse }}</p>
-            <p>{{ infos.tarifs.note }}</p>
-
-            <div class="flex gap-1">
-              <h2 class="font-bold">Durée de la séance :</h2>
-              <p>{{ infos.dureeDeLaSeance }}</p>
-            </div>
-
-            <div class="flex gap-1">
-              <h2 class="font-bold">Mode de règlement :</h2>
-              @for (mode of infos.modeDeReglement; track $index) {
-                <p>{{ mode }}</p>
-              }
-            </div>
-          </div>
+        <div class="grid grid-cols-2 h-full w-full md:w-1/2 rounded-xl mt-10 lg:mt-0">
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ex expedita dolorum nulla eaque delectus asperiores pariatur, cumque rerum quibusdam?</div>
+          <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate reprehenderit aspernatur sit eligendi esse consequatur debitis obcaecati voluptates cumque perferendis?</div>
         </div>
       </div>
     </div>
@@ -95,6 +67,8 @@
 
   <div class="flex w-full h-screen justify-center bg-[#9CA48D] pb-20" id="contact">
     <h2 class="text-2xl font-bold tracking-tight sm:text-2xl pt-28">{{rdv}}</h2>
+    <div id="ie_dynamic_widget" data-base-color="">
+      <script type="text/javascript" src="https://www.psychologue.net/widget/company_schedule?com=434216&h=ea20be21d68492090b0e60710cf4f60d&v=10&utm_source=434216&utm_medium=widget&utm_campaign=widget-company_schedule"></script> </div>
   </div>
 
 </section>
