@@ -1,11 +1,12 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MapComponent } from '../../shared/components/map/map.component';
 import { AnimationService } from '../../animation.service';
+import { ExternalScriptComponent } from '../../shared/components/external-script/external-script.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MapComponent],
+  imports: [MapComponent, ExternalScriptComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -22,25 +23,22 @@ export class HomeComponent implements OnInit, AfterViewInit{
   public rdv: string = 'Prendre rendez-vous';
   public infos: any = {
     email: 'contact@alisee-eggermont-psy.fr',
-    telephone: '06 82 37 02 51',
-    adresse: '105 rue Duguesclin, 69006 Lyon',
-    accederAuCabinet: {
+    phone: '06 82 37 02 51',
+    address: '105 rue Duguesclin, 69006 Lyon',
+    office: {
       metro: 'Métro A - Foch',
-      bus: [
-        'BUS 27 - Foch',
-        'BUS 38 - Mairie du 6ème',
-        'BUS C4 - Edgar Quinet'
-      ]
+      bus1: 'BUS 27 - Foch',
+      bus2: 'BUS 38 - Mairie du 6ème',
+      bus3: 'BUS C4 - Edgar Quinet'
     },
     tarifs: {
-      psychotherapieDeSoutien: '60 euros',
-      psychanalyse: '60 euros',
-      note: 'Afin de continuer à rendre la psychanalyse accessible au plus grand nombre, il est possible d’adapter le prix des séances en fonction de votre situation.'
+      psychotherapieDeSoutien: 'Psychothérapie de soutien ou analytique : 60 euros',
+      psychanalyse: 'Psychanalyse : 60 euros',
+      note: "Afin de continuer à rendre la psychanalyse accessible il est possible,  dans certains cas,  d’adapter le prix des séances."
     },
-    dureeDeLaSeance: '50 minutes',
+    dureeDeLaSeance: '50 minutes environ',
     modeDeReglement: [
-      'Chèque,',
-      'Espèces'
+      'Chèque ', ' Espèces'
     ]
   };
 
