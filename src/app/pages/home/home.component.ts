@@ -37,13 +37,13 @@ export class HomeComponent implements OnInit, AfterViewInit{
       {
         id: 3,
         title: "Psychanalyse",
-        text: "",
+        text: "La psychanalyse est une approche plus approfondie, un véritable voyage à l’intérieur de soi. Elle permet d’explorer les sources inconscientes de votre souffrance, vos pensées et vos émotions, pour vous en libérer durablement. Autrement dit, elle ne se contente pas de soulager vos symptômes, mais s'attaque à leurs racines. Bien que la temporalité soit un outil nécessaire à une psychanalyse fonctionnelle, cela ne signifie pas nécessairement une thérapie de longue durée. En psychanalyse, le patient est au centre du processus de guérison. Le psychanalyste l'accompagne dans ce voyage intérieur, en créant un cadre favorable à l'exploration de soi, comme la position allongée qui facilite la libre association.",
       },
     ],
+    conclusion: "Au cours des premières séances, nous échangerons sur vous, vos besoins, vos craintes, vos souffrances. Ensuite, nous pourrons déterminer ensemble l’accompagnement le plus favorable à votre situation. Il est important de savoir qu’en séance, vous pouvez tout dire sans peur d’être jugé, sans tabou. C’est au cœur d’une relation de confiance qu’une thérapie peut fonctionner."
   } ;
   public therapyst: string = 'Votre thérapeute';
   public info: string = 'Informations pratiques';
-  public rdv: string = 'Prendre rendez-vous';
   public infos: any = {
     email: 'contact@alisee-eggermont-psy.fr',
     phone: '06 82 37 02 51',

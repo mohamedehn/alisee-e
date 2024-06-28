@@ -17,12 +17,12 @@
     <div class="mx-auto text-center h-full">
       <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-20">{{therapy.title}}</h2>
       <div class="mt-8 text-lg leading-8 text-justify bloc lg:flex gap-10 justify-center lg:grid-cols-2">
-        <div class="w-full lg:w-1/2 bg-[#474747a3] m-auto flex flex-col gap-3">
+        <div class="w-full bg-[#474747a3] m-auto flex flex-col gap-3">
           <p class="an-1 text-justify text-white mx-4 my-4">
             {{therapy.intro}}
           </p>
           <div class="w-full h-full">
-            <div *ngFor="let category of therapy.categories; let i = index">
+            <div *ngFor="let category of therapy.categories; let i = index" class="flex justify-center flex-col items-center">
               <div class="cursor-pointer flex gap-3 bg-[#9ca48db6] text-[#474747] mt-2 lg:w-80 w-full items-center h-10 mb-4 lg:ml-4 justify-between" (click)="toggleDropDown(i)">
                 <h4 class="flex an-1 text-justify justify-center mx-4 my-4 font-medium">
                   {{category.title}}
@@ -38,11 +38,9 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="w-full sm:w-3/4 lg:w-1/2 h-[400px] justify-center flex m-auto mt-10 lg:mt-0">
-          <img src="{{officeImg}}"
-               alt="therapy"
-               class="pr-3 w-full h-full">
+          <p class="an-1 text-justify text-white mx-4 my-4">
+            {{therapy.conclusion}}
+          </p>
         </div>
       </div>
     </div>
@@ -138,16 +136,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="flex w-full h-screen justify-center bg-[#9CA48D]"
-       id="contact">
-    <h2 class="text-2xl font-bold tracking-tight sm:text-2xl pt-28">{{rdv}}</h2>
-    <div id="ie_dynamic_widget"
-         data-base-color=""></div>
-    <script type="text/javascript"
-            src="https://www.psychologue.net/widget/company_schedule?com=434216&h=ea20be21d68492090b0e60710cf4f60d&v=10&utm_source=434216&utm_medium=widget&utm_campaign=widget-company_schedule">
-            </script>
   </div>
 
 </section>
