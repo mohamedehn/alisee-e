@@ -1,5 +1,6 @@
 <section class="lg:flex lg:flex-col bloc w-full h-full z-10">
-  <div class="flex w-full h-full md:h-screen justify-center items-center bg-[#9CA48D] md:pb-20"
+  <!-- Header -->
+  <div class="flex w-full h-full md:h-screen justify-center items-center bg-[#9CA48D] pb-20"
        id="home">
     <div class="pt-28 md:pt-0 md:pb-0 pb-28 flex flex-col justify-center items-center w-full bg-[#ded9d5] h-full textured-background">
       <h2 class="an-1 text-4xl md:text-6xl font-bold tracking-tight headerName">{{name}}</h2>
@@ -12,6 +13,15 @@
     </div>
   </div>
 
+  <!-- Carousel -->
+   <div class="h-full bg-[#9ca48d60] flex flex-col my-28 z-1" id="office">
+    <div class="mx-auto text-center h-full">
+      <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-20">Le Cabinet</h2>
+      <app-carousel [items]="carouselItems"></app-carousel>
+     </div>
+   </div>
+
+  <!-- Therapy -->
   <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full lg:h-screen w-full bloc lg:flex lg:flex-col"
        id="therapy">
     <div class="mx-auto text-center h-full">
@@ -27,16 +37,15 @@
                 <h4 class="flex an-1 text-justify justify-center mx-4 my-4 font-medium">
                   {{category.title}}
                 </h4>
-                @if (isOpen) {
-                  <span class="material-symbols-outlined">keyboard_arrow_up</span>
-                } @else {
-                  <span class="material-symbols-outlined">keyboard_arrow_down</span>
-                }
+                <span class="material-symbols-outlined">
+                  {{ openedCategoryIndex === i ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}
+                </span>
               </div>
               <div class="an-1 text-justify text-white mx-4 my-4" *ngIf="openedCategoryIndex === i">
                 {{category.text}}
               </div>
             </div>
+
           </div>
           <p class="an-1 text-justify text-white mx-4 my-4">
             {{therapy.conclusion}}
@@ -46,30 +55,30 @@
     </div>
   </div>
 
-  <div class="px-6 lg:px-8 bg-[#9ca48d96] h-full pt-20 md:pt-0 lg:flex lg:flex-col justify-center"
+  <!-- Therapyst -->
+  <div class="lg:py-16 px-6 lg:px-8 bg-[#9ca48d96] h-full pt-20 md:pt-0 lg:flex lg:flex-col justify-center"
        id="psy">
     <div class="mx-auto max-w-8xl text-center bg-[#F0ECE9] h-full">
     <div class="flex flex-col w-full h-full">
       <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl pt-5">{{therapyst}}</h2>
       <div class="h-full text-lg leading-8 text-justify bloc lg:flex gap-5 justify-center w-full mt-2">
-        <div class="items-center lg:grid-cols-2 flex h-full lg:flex-row flex-col w-full lg:w-2/3 rounded-xl">
-          <div class="lg:w-[47%] flex flex-col h-full">
+        <div class="items-start lg:grid-cols-2 flex h-full lg:flex-row flex-col w-full lg:w-2/3 rounded-xl">
+          <div class="lg:w-[47%] flex flex-col h-full flex-1">
             <p class="an-1 text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro1}}</p>
             <div>
               <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text1}}</p>
               <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text2}}</p>
             </div>
-
           </div>
-          <div class="lg:w-[53%] flex flex-col h-full">
+          <div class="lg:w-[53%] flex flex-col h-full flex-1">
             <p class="an-1 text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro2}}</p>
             <div>
               <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text4}}</p>
-            <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text3}}</p>
+              <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text3}}</p>
             </div>
-
           </div>
         </div>
+
         <div class="w-[90%] lg:w-1/3 h-full flex items-center m-auto">
           <img src="{{aliseeImg}}"
                alt="alisée"
@@ -80,9 +89,10 @@
     </div>
   </div>
 
+  <!-- Infos -->
   <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full lg:h-screen w-full bloc lg:flex lg:flex-col pt-10 md:pt-0 pb-20 md:mb-0"
        id="infos">
-    <div class="mx-auto max-w-8xl text-center h-full pt-20">
+    <div class="mx-auto max-w-8xl text-center h-full lg:pt-20">
       <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl mt-10 lg:mt-0 pt-5">{{info}}</h2>
       <div class="text-lg leading-8 text-justify bloc lg:flex gap-10 justify-center max-w-8xl m-auto mt-12">
         <div class="an-1 w-full lg:w-1/2 m-auto z-1 flex justify-center items-center">
@@ -117,7 +127,7 @@
               <p class="md:pl-3">{{infos.office.bus3}}</p>
             </div>
           </div>
-          <div class="flex flex-wrap gap-6">
+          <div class="flex flex-wrap gap-6 flex-col">
             <div>
               <h4 class="text-[#596551] font-bold an-1 mt-2 md:mt-0">Tarifs</h4>
               <p class="mt-2 an-1 md:pl-3">{{infos.tarifs.psychotherapieDeSoutien}}</p>

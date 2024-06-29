@@ -19,6 +19,7 @@ export class NavbarComponent {
 
   public navElements = [
     { name: 'Accueil', link: '#home' },
+    { name: 'Le cabinet', link: '#office'},
     { name: 'Thérapie', link: '#therapy' },
     { name: 'Votre thérapeute', link: '#psy' },
     { name: 'Info pratiques', link: '#infos' },

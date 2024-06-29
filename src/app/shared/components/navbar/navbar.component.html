@@ -1,15 +1,15 @@
-<section class="z-100 h-20 fixed w-full flex bg-[#9CA48D] px-10 text-black items-center justify-between">
+<section class="z-[1000] h-20 fixed w-full flex bg-[#9CA48D] px-10 text-black items-center justify-between">
   <div class="flex items-center headerName text-4xl max-w-80 w-full">
     {{headerName}}
   </div>
-  <div class="hidden lg:flex items-center h-full text-lg font-semibold justify-end w-full">
+  <div class="hidden xl:flex items-center h-full text-lg font-semibold justify-end w-full">
     <div class="flex items-center h-full gap-6">
       <ng-container *ngFor="let element of navElements">
         <a href="{{element.link}}" class="hover:text-white">{{ element.name }}</a>
       </ng-container>
     </div>
   </div>
-  <div class="flex lg:hidden items-center">
+  <div class="flex xl:hidden items-center">
     <button (click)="toggleMenu()" class="focus:outline-none">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -18,7 +18,7 @@
   </div>
 </section>
 
-<div *ngIf="menuOpen" class="z-100 fixed inset-0 bg-[#9CA48D] flex flex-col items-center justify-start pt-8 h-full lg:hidden">
+<div *ngIf="menuOpen" class="z-[1000] fixed inset-0 bg-[#9CA48D] flex flex-col items-center justify-start pt-8 h-full xl:hidden">
   <div class="flex w-full justify-end pr-10">
     <button (click)="toggleMenu()" class="focus:outline-none">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
