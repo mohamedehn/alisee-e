@@ -19,15 +19,110 @@ html {
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'zenithCp';
-  src: url('./assets/fonts/zenith.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
+.iew-base{
+  width: 100%!important;
+  max-width: 100%!important;
+  .iew-head{
+    width: 100%!important;
+    display: flex;
+    margin: auto;
+  }
 }
 
-.headerName2 {
-  font-family: 'zenithCp', cursive!important;
-  font-weight: 400;
-  font-style: normal;
+// #iew_aw_app {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+//   width: 100%!important;
+//   background-color: #9CA48D;
+//   z-index: 1000;
+
+//   div{
+//     width: 80%!important;
+//   }
+// }
+
+#iew_aw_app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 700px !important;
+  background-color: #9CA48D;
+
+  div{
+    width: 100%;
+  }
+}
+
+#iew_aw_app .widget-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#iew_aw_app .widget-header {
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#iew_aw_app .widget-content {
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#iew_aw_app .widget-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#iew_aw_app .widget-button {
+  background-color: #475569;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#iew_aw_app .widget-button:hover {
+  background-color: #334155;
+}
+
+.ie-loader {
+  display: flex;
+  margin: auto;
+  width: 55px!important; /* Taille du spinner */
+  height: 55px!important; /* Taille du spinner */
+  animation: rotateSpinner 800ms linear infinite!important;
+}
+
+@keyframes rotateSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
 }

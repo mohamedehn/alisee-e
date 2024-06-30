@@ -12,13 +12,14 @@ import { RouterLink } from '@angular/router';
 })
 export class NavbarComponent {
   public image: string = '';
-  public headerName: string = "Alisée Eggermont";
+  public headerName: string = "Nom et Prénom";
   public menuOpen: boolean = false;
 
   constructor() {}
 
   public navElements = [
     { name: 'Accueil', link: '#home' },
+    { name: 'Le cabinet', link: '#office'},
     { name: 'Thérapie', link: '#therapy' },
     { name: 'Votre thérapeute', link: '#psy' },
     { name: 'Info pratiques', link: '#infos' },

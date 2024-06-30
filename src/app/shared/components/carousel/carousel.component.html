@@ -1,0 +1,14 @@
+<div class="carousel h-[300px] md:h-[550px] bg-[#9ca48d60] mt-8">
+  <div class="carousel-viewport">
+    <div class="carousel-inner" [style.transform]="getTransform()">
+      <div class="carousel-item" *ngFor="let item of items">
+        <img [src]="item.image" alt="Slide">
+      </div>
+    </div>
+  </div>
+  <div class="carousel-indicators">
+    <div class="carousel-bg">
+      <div *ngFor="let item of items; let i = index" [class.active]="i === currentIndex" class="carousel-indicator" (click)="navigate(i)"></div>
+    </div>
+  </div>
+</div>
