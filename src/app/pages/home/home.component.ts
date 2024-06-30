@@ -44,7 +44,7 @@ export class HomeComponent implements AfterViewInit {
       {
         id: 2,
         title: 'Psychothérapie analytique',
-        text: 'La psychothérapie analytique vous permet d’explorer les profondeurs de l’inconscient pour comprendre les racines de vos comportements et de vos émotions. Elle intègre des principes psychanalytiques mais elle est plus accessible, moins intensive. La différence majeure se trouve dans le fait que l’échange se déroule en face à face et non sur le divan',
+        text: 'La psychothérapie analytique vous permet d’explorer les profondeurs de l’inconscient pour comprendre les racines de vos comportements et de vos émotions. Elle intègre des principes psychanalytiques mais elle est plus accessible, moins intensive. La différence majeure se trouve dans le fait que l’échange se déroule en face à face et non sur le divan.',
       },
       {
         id: 3,

@@ -1,6 +1,6 @@
 <section class="lg:flex lg:flex-col bloc w-full h-full z-10">
   <!-- Header -->
-  <div class="flex w-full h-full md:h-screen justify-center items-center bg-[#9CA48D] pb-20"
+  <div class="flex w-full h-screen justify-center items-center bg-[#9CA48D] pb-20"
        id="home">
     <div class="pt-28 md:pt-0 md:pb-0 pb-28 flex flex-col justify-center items-center w-full bg-[#ded9d5] h-full textured-background">
       <h2 class="an-1 text-4xl md:text-6xl font-bold tracking-tight headerName">{{name}}</h2>
@@ -14,7 +14,7 @@
   </div>
 
   <!-- Carousel -->
-   <div class="h-full bg-[#9ca48d60] flex flex-col my-28 z-1" id="office">
+   <div class="h-full bg-[#9ca48d60] flex flex-col z-1" id="office">
     <div class="mx-auto text-center h-full">
       <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-20">Le Cabinet</h2>
       <app-carousel [items]="carouselItems"></app-carousel>
@@ -22,7 +22,7 @@
    </div>
 
   <!-- Therapy -->
-  <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full lg:h-screen w-full bloc lg:flex lg:flex-col"
+  <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full w-full bloc lg:flex lg:flex-col pb-20"
        id="therapy">
     <div class="mx-auto text-center h-full">
       <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-20">{{therapy.title}}</h2>
@@ -41,8 +41,10 @@
                   {{ openedCategoryIndex === i ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}
                 </span>
               </div>
-              <div class="an-1 text-justify text-white mx-4 my-4" *ngIf="openedCategoryIndex === i">
-                {{category.text}}
+              <div class="transition-opacity duration-500 ease-in-out" [ngClass]="{'hidden': openedCategoryIndex !== i, 'block': openedCategoryIndex === i}">
+                <p class="an-1 text-justify text-white mx-4 my-4" [ngClass]="{'fade-in': openedCategoryIndex === i}">
+                  {{category.text}}
+                </p>
               </div>
             </div>
 
@@ -78,8 +80,7 @@
             </div>
           </div>
         </div>
-
-        <div class="w-[90%] lg:w-1/3 h-full flex items-center m-auto">
+        <div class="w-[90%] lg:w-1/3 h-full flex items-center m-auto pb-10 lg:pb-0">
           <img src="{{aliseeImg}}"
                alt="alisée"
                class="pr-3">
@@ -93,7 +94,7 @@
   <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full lg:h-screen w-full bloc lg:flex lg:flex-col pt-10 md:pt-0 pb-20 md:mb-0"
        id="infos">
     <div class="mx-auto max-w-8xl text-center h-full lg:pt-20">
-      <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl mt-10 lg:mt-0 pt-5">{{info}}</h2>
+      <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl pt-10 lg:pt-0">{{info}}</h2>
       <div class="text-lg leading-8 text-justify bloc lg:flex gap-10 justify-center max-w-8xl m-auto mt-12">
         <div class="an-1 w-full lg:w-1/2 m-auto z-1 flex justify-center items-center">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.1640674517057!2d4.8476745!3d45.7679021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb150e31e24b%3A0x25dca6ac81c8dab5!2sAlis%C3%A9e%20Eggermont!5e0!3m2!1sfr!2sfr!4v1719434135950!5m2!1sfr!2sfr"

@@ -105,8 +105,24 @@ html {
   animation: rotateSpinner 800ms linear infinite!important;
 }
 
-// @keyframes rotateSpinner {
-// 	to {
-// 		transform: rotate(360deg);
-// 	}
-// }
+@keyframes rotateSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
+}
