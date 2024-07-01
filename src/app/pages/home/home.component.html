@@ -1,25 +1,19 @@
 <section class="lg:flex lg:flex-col bloc w-full h-full z-10">
   <!-- Header -->
-  <div class="flex w-full h-screen justify-center items-center bg-[#9CA48D] pb-20"
+  <div class="flex w-full h-screen justify-center items-center pb-20 bg-[#9CA48D]"
        id="home">
-    <div class="pt-28 md:pt-0 md:pb-0 pb-28 flex flex-col justify-center items-center w-full bg-[#ded9d5] h-full textured-background">
-      <h2 class="an-1 text-4xl md:text-6xl font-bold tracking-tight headerName">{{name}}</h2>
-      <h3 class="an-1 text-xl font-medium">{{introduction}}</h3>
-      <img src="{{homeImg2}}"
-           alt=""
-           width="550px"
-           height="450px"
-           class="an-1 z-100 object-contain" loading="lazy">
+    <div class="md:pt-0 md:pb-0 pb-28 flex flex-col justify-center items-center w-full h-full">
+      <div class="absolute h-full bottom-0 z-10 opacity-90 flex flex-col items-center justify-center gap-4">
+        <h2 class="an-1 text-4xl md:text-6xl font-bold tracking-tight headerName">{{name}}</h2>
+        <h3 class="an-1 text-xl font-medium">{{introduction}}</h3>
+      </div>
+      <div class="h-full flex flex-col z-1 opacity-60">
+        <div class="mx-auto text-center h-full">
+          <app-carousel [items]="carouselItems"></app-carousel>
+         </div>
+       </div>
     </div>
   </div>
-
-  <!-- Carousel -->
-   <div class="h-full bg-[#9ca48d60] flex flex-col z-1" id="office">
-    <div class="mx-auto text-center h-full">
-      <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-20">Le Cabinet</h2>
-      <app-carousel [items]="carouselItems"></app-carousel>
-     </div>
-   </div>
 
   <!-- Therapy -->
   <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full w-full bloc lg:flex lg:flex-col pb-20"

@@ -4,37 +4,30 @@ import {
   ChangeDetectorRef,
   Component,
 } from '@angular/core';
-import { MapComponent } from '../../shared/components/map/map.component';
 import { AnimationService } from '../../animation.service';
-import { ExternalScriptComponent } from '../../shared/components/external-script/external-script.component';
 import { CommonModule } from '@angular/common';
 import { CarouselComponent } from '../../shared/components/carousel/carousel.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    MapComponent,
-    ExternalScriptComponent,
-    CommonModule,
-    CarouselComponent,
-  ],
+  imports: [CommonModule, CarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements AfterViewInit {
-  public name: string = 'Nom et Prénom';
+  public name: string = 'Nom et prénom';
   public introduction: string = 'Psychanalyste à Lyon';
   public description: string = '';
   public homeImg: string = 'assets/homes.png';
   public homeImg2: string = 'assets/homes2.png';
   public officeImg: string = 'assets/office.jpg';
-  public aliseeImg: string = 'assets/alisee.png';
+  public aliseeImg: string = 'assets/alisee.webp';
   public therapy: any = {
     title: 'Thérapie',
     intro:
-      'Qu’il s’agisse d’une psychanalyse, d’une psychothérapie de soutien ou une psychothérapie analytique, le but est que vous soyez accompagné(e) pour traiter vos maux par vos mots. Le choix du type de thérapie se fait naturellement, en fonction de vos besoins et envies. Le rôle de tout thérapeute est le mieux-être du patient, mais le chemin pour y arriver diffère en fonction du type de thérapie : ',
+      'Aller à la rencontre d’un psy, qu’il s’agisse d’un psychanalyste, d’un psychologue ou d’un psychothérapeute, n’est pas une démarche facile pour tout le monde. Toutefois, le but est que vous soyez accompagné(e) pour traiter vos maux par vos mots. Le choix du type de thérapie se fait naturellement, en fonction de vos besoins et envies. Le rôle de tout thérapeute est le mieux-être du patient, mais le chemin pour y arriver diffère en fonction du type de thérapie. Pour ma part, je vous propose trois types d’accompagnement différents : la psychanalyse, la psychothérapie de soutien et la psychothérapie analytique.',
     categories: [
       {
         id: 1,
@@ -103,13 +96,13 @@ export class HomeComponent implements AfterViewInit {
   getImages() {
     this.carouselItems.push(
       {
-        image: 'assets/office1.jpg',
+        image: 'assets/office1.webp',
       },
       {
-        image: 'assets/office2.png',
+        image: 'assets/office2.webp',
       },
       {
-        image: 'assets/office3.jpg',
+        image: 'assets/office3.webp',
       }
     );
   }

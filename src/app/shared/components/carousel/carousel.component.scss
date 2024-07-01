@@ -27,7 +27,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  z-index: 0;
+  z-index: 10;
   .carousel-viewport {
     width: 100%;
     overflow: hidden;
@@ -46,8 +46,6 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      opacity: 0.9;
     }
   }
   .carousel-indicators {
@@ -66,6 +64,7 @@
       padding-top: 12px;
       padding-bottom: 12px;
       height: auto;
+      z-index: 10;
       .carousel-indicator {
         opacity: 1;
         display: flex;

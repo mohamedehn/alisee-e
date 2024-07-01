@@ -14,7 +14,7 @@ html {
 }
 
 .headerName {
-  font-family: "Great Vibes", cursive;
+  font-family: cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -28,21 +28,6 @@ html {
     margin: auto;
   }
 }
-
-// #iew_aw_app {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100%;
-//   width: 100%!important;
-//   background-color: #9CA48D;
-//   z-index: 1000;
-
-//   div{
-//     width: 80%!important;
-//   }
-// }
 
 #iew_aw_app {
   display: flex;
