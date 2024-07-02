@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 
 interface CarouselItem {
   image: string;
@@ -17,14 +23,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   public currentIndex: number = 0;
   public interval: any;
 
-  // To use compo in another one :
-  // create in the component an CarouselItem array which will be filled with the data from the API
-  // this carouselItems will take the same data as the interface CarouselItem
-  // then push data from the API to the carouselItems array
-  // then in the html of the component, add the carousel component and give it the carouselItems as input
-  // <app-carousel [items]="carouselItems"></app-carousel>
-
-  constructor(private cdRef:ChangeDetectorRef) {}
+  constructor(private cdRef: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.startCarousel();
     this.cdRef.detectChanges();
@@ -54,5 +53,4 @@ export class CarouselComponent implements OnInit, OnDestroy {
   getCurrentItem() {
     return this.items[this.currentIndex];
   }
-
 }
