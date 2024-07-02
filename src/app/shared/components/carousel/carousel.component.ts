@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 
 interface CarouselItem {
   image: string;
@@ -17,7 +23,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   public currentIndex: number = 0;
   public interval: any;
 
-  constructor(private cdRef:ChangeDetectorRef) {}
+  constructor(private cdRef: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.startCarousel();
     this.cdRef.detectChanges();
@@ -47,5 +53,4 @@ export class CarouselComponent implements OnInit, OnDestroy {
   getCurrentItem() {
     return this.items[this.currentIndex];
   }
-
 }

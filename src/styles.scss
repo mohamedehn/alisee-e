@@ -19,26 +19,29 @@ html {
   font-style: normal;
 }
 
-.iew-base{
-  width: 100%!important;
-  max-width: 100%!important;
-  .iew-head{
-    width: 100%!important;
+.iew-base {
+  width: 100% !important;
+  max-width: 100% !important;
+
+  .iew-head {
+    width: 100% !important;
     display: flex;
     margin: auto;
   }
 }
 
 #iew_aw_app {
+  margin-top: 35px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 80%;
   width: 700px !important;
   background-color: #9CA48D;
 
-  div{
+  div {
     width: 100%;
   }
 }
@@ -64,7 +67,7 @@ html {
 }
 
 #iew_aw_app .widget-footer {
-  margin-top: 20px;
+  // margin-top: 20px;
   text-align: center;
 }
 
@@ -85,15 +88,16 @@ html {
 .ie-loader {
   display: flex;
   margin: auto;
-  width: 55px!important; /* Taille du spinner */
-  height: 55px!important; /* Taille du spinner */
-  animation: rotateSpinner 800ms linear infinite!important;
+  width: 55px !important;
+  height: 55px !important;
+  animation: rotateSpinner 800ms linear infinite !important;
 }
 
 @keyframes rotateSpinner {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -103,6 +107,7 @@ html {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

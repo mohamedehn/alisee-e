@@ -62,7 +62,13 @@
           <div class="lg:w-[47%] flex flex-col h-full flex-1">
             <p class="an-1 text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro1}}</p>
             <div>
-              <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text1}}</p>
+              <p class="an-1 text-justify text-[#596551] mx-4 my-4">
+                Je suis psychanalyste, formée au sein de la Fédération Freudienne de Psychanalyse
+                <a href="http://www.psychanalyse.fr/" class="underline">(FFDP)</a> pendant cinq ans. Cet apprentissage, à la fois théorique et pratique, a été
+                complété par une psychanalyse personnelle et didactique de plusieurs années. Mon activité
+                est supervisée par un psychanalyste de la FFDP, garantissant ainsi le respect du code
+                déontologique.
+              </p>
               <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text2}}</p>
             </div>
           </div>
@@ -85,7 +91,7 @@
   </div>
 
   <!-- Infos -->
-  <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full lg:h-screen w-full bloc lg:flex lg:flex-col pt-10 md:pt-0 pb-20 md:mb-0"
+  <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full w-full bloc lg:flex lg:flex-col pt-10 md:pt-0 pb-20 md:mb-0"
        id="infos">
     <div class="mx-auto max-w-8xl text-center h-full lg:pt-20">
       <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl pt-10 lg:pt-0">{{info}}</h2>
@@ -100,7 +106,7 @@
                   referrerpolicy="no-referrer-when-downgrade"
                   title="map"></iframe>
         </div>
-        <div class="items-start justify-center gap-8 md:gap-16 md:grid md:grid-cols-2 h-full w-full lg:w-1/2 rounded-xl mt-10 lg:mt-0">
+        <div class="items-start justify-center gap-8 md:grid md:grid-cols-2 h-full w-full lg:w-1/2 rounded-xl mt-10 lg:mt-0">
           <div class="flex flex-col flex-wrap gap-6 md:border-r-2 border-[#9ca48d60] pr-2">
             <div class="an-1">
               <h4 class="text-[#596551] font-bold">Email :</h4>
@@ -113,6 +119,7 @@
             <div class="an-1">
               <h4 class="text-[#596551] font-bold">Adresse :</h4>
               <p class="md:pl-3 mt-1">{{infos.address}}</p>
+              <p class="md:pl-3 mt-1">{{infos.address2}}</p>
             </div>
             <div class="an-1">
               <h4 class="text-[#596551] font-bold">Accéder au cabinet :</h4>
