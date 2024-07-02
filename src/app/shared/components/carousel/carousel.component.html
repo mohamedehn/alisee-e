@@ -2,10 +2,7 @@
   <div class="carousel-viewport">
     <div class="carousel-inner" [style.transform]="getTransform()">
       <div class="carousel-item" *ngFor="let item of items">
-        <link rel="preload" href="assets/office1.webp" as="image" type="image/webp">
-        <link rel="preload" href="assets/office2.webp" as="image" type="image/webp">
-        <link rel="preload" href="assets/office3.webp" as="image" type="image/webp">
-        <img [src]="item.image" alt="Slide" class="object-cover md:object-fill" async loading="eager">
+        <img [src]="item.image" alt="Slide" class="object-cover md:object-fill">
       </div>
     </div>
   </div>
