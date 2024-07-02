@@ -11,5 +11,5 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'alisee-e';
+  title = 'Alisée Eggermont';
 }
