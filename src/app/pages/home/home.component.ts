@@ -7,11 +7,13 @@ import {
 import { AnimationService } from '../../animation.service';
 import { CommonModule } from '@angular/common';
 import { CarouselComponent } from '../../shared/components/carousel/carousel.component';
+import { WidgetComponent } from '../../shared/components/widget/widget.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, CarouselComponent],
+  imports: [CommonModule, CarouselComponent, WidgetComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
