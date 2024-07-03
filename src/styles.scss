@@ -41,6 +41,10 @@ html {
   width: 700px !important;
   background-color: #9CA48D;
 
+  @media (max-width: 768px) {
+    width: 100% !important;
+  }
+
   div {
     width: 100%;
   }
