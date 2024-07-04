@@ -1,9 +1,9 @@
 <section class="lg:flex lg:flex-col bloc w-full h-full z-10">
   <!-- Header -->
-  <div class="flex w-full h-screen justify-center items-center pb-20 bg-[#9CA48D]"
+  <div class="flex w-full h-svh md:h-screen justify-center items-center md:pb-20 bg-[#9CA48D]"
        id="home">
     <div class="md:pt-0 md:pb-0 pb-28 flex flex-col justify-center items-center w-full h-full">
-      <div class="absolute h-full bottom-0 z-10 opacity-90 flex flex-col items-center justify-center gap-4">
+      <div class="absolute h-full md:bottom-0 z-10 opacity-90 flex flex-col items-center justify-center gap-4 pt-28 md:pt-0">
         <h2 class="an-1 text-4xl md:text-6xl font-bold tracking-tight headerName">{{name}}</h2>
         <h3 class="an-1 text-xl font-medium">{{introduction}}</h3>
       </div>
@@ -20,10 +20,14 @@
        id="therapy">
     <div class="mx-auto text-center h-full">
       <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-20">{{therapy.title}}</h2>
-      <div class="mt-8 text-lg leading-8 text-justify bloc lg:flex gap-10 justify-center lg:grid-cols-2">
+      <div class="mt-8 text-base leading-8 text-justify bloc lg:flex gap-10 justify-center lg:grid-cols-2">
         <div class="w-full bg-[#474747a3] m-auto flex flex-col gap-3">
           <p class="an-1 text-justify text-white mx-4 my-4">
             {{therapy.intro}}
+          </p>
+          <p class="an-1 text-justify text-white mx-4 my-4">
+            Pour ma part, je vous propose trois types d’accompagnement différents : la <span class="font-bold">psychanalyse</span>,
+            la <span class="font-bold">psychothérapie de soutien </span>et la <span class="font-bold">psychothérapie analytique</span>.
           </p>
           <div class="w-full h-full">
             <div *ngFor="let category of therapy.categories; let i = index" class="flex justify-center flex-col items-center">
@@ -41,7 +45,7 @@
                 </p>
               </div>
             </div>
-
+          <div class="border-dashed border flex m-auto w-1/2 mt-2"></div>
           </div>
           <p class="an-1 text-justify text-white mx-4 my-4">
             {{therapy.conclusion}}
@@ -57,7 +61,7 @@
     <div class="mx-auto max-w-8xl text-center bg-[#F0ECE9] h-full">
     <div class="flex flex-col w-full h-full">
       <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl pt-5">{{therapyst}}</h2>
-      <div class="h-full text-lg leading-8 text-justify bloc lg:flex gap-5 justify-center w-full mt-2">
+      <div class="h-full text-base leading-8 text-justify bloc lg:flex gap-5 justify-center w-full mt-2">
         <div class="items-start lg:grid-cols-2 flex h-full lg:flex-row flex-col w-full lg:w-2/3 rounded-xl">
           <div class="lg:w-[47%] flex flex-col h-full flex-1">
             <p class="an-1 text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro1}}</p>
@@ -75,8 +79,8 @@
           <div class="lg:w-[53%] flex flex-col h-full flex-1">
             <p class="an-1 text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro2}}</p>
             <div>
-              <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text4}}</p>
               <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text3}}</p>
+              <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text4}}</p>
             </div>
           </div>
         </div>
@@ -95,7 +99,7 @@
        id="infos">
     <div class="mx-auto max-w-8xl text-center h-full lg:pt-20">
       <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl pt-10 lg:pt-0">{{info}}</h2>
-      <div class="text-lg leading-8 text-justify bloc lg:flex gap-10 justify-center max-w-8xl m-auto mt-12">
+      <div class="text-base leading-8 text-justify bloc lg:flex gap-10 justify-center max-w-8xl m-auto mt-12">
         <div class="an-1 w-full lg:w-1/2 m-auto z-1 flex justify-center items-center">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.1640674517057!2d4.8476745!3d45.7679021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb150e31e24b%3A0x25dca6ac81c8dab5!2sAlis%C3%A9e%20Eggermont!5e0!3m2!1sfr!2sfr!4v1719434135950!5m2!1sfr!2sfr"
                   width="600"
@@ -150,8 +154,8 @@
     </div>
   </div>
 
-  <div class="flex flex-col w-full h-full lg:h-screen justify-center bg-[#9CA48D] items-center" id="contact">
-      <h2 class="text-2xl font-bold tracking-tight sm:text-2xl pt-20">
+  <div class="flex flex-col w-full h-full max-h-screen bg-[#9CA48D] items-center" id="contact">
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl pt-20">
         Prendre rendez-vous
       </h2>
         <app-widget></app-widget>

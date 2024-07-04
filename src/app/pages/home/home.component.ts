@@ -29,12 +29,12 @@ export class HomeComponent implements AfterViewInit {
   public therapy: any = {
     title: 'Thérapie',
     intro:
-      'Aller à la rencontre d’un psy, qu’il s’agisse d’un psychanalyste, d’un psychologue ou d’un psychothérapeute, n’est pas une démarche facile pour tout le monde. Le but est que vous soyez accompagné(e) pour traiter vos maux par vos mots. Le choix du type de thérapie se fait naturellement, en fonction de vos besoins et envies. Le rôle de tout thérapeute est le mieux-être du patient, mais le chemin pour y arriver diffère en fonction du type de thérapie. Pour ma part, je vous propose trois types d’accompagnement différents : la psychanalyse, la psychothérapie de soutien et la psychothérapie analytique.',
+      'Aller à la rencontre d’un psy, qu’il s’agisse d’un psychanalyste, d’un psychologue ou d’un psychothérapeute, n’est pas une démarche facile pour tout le monde. Le but est que vous soyez accompagné(e) pour traiter vos maux par vos mots. Le choix du type de thérapie se fait naturellement, en fonction de vos besoins et envies. Le rôle de tout thérapeute est le mieux-être du patient, mais le chemin pour y arriver diffère en fonction du type de thérapie.',
     categories: [
       {
         id: 1,
         title: 'Psychothérapie de soutien',
-        text: 'La psychothérapie de soutien intervient lorsque vous avez besoin d’un soutien ponctuel pour avancer. Elle se concentre sur le présent en vous offrant un espace d’écoute, idéal pour les thérapies de plus courte durée. Permettant de mieux vous comprendre, elle vous apporte les ressources nécessaires pour avancer lorsque vous vous sentez dépassé(e) par les difficultés de la vie. ',
+        text: 'La psychothérapie de soutien intervient lorsque vous avez besoin d’un soutien ponctuel pour avancer. Elle se concentre sur le présent en vous offrant un espace d’écoute, idéal pour les thérapies de plus courte durée. Permettant de mieux vous comprendre, elle vous apporte les ressources nécessaires pour avancer lorsque vous vous sentez dépassé(e) par les difficultés de la vie.',
       },
       {
         id: 2,
@@ -76,12 +76,12 @@ export class HomeComponent implements AfterViewInit {
   public therapystInfos: any = {
     intro1: 'Qui suis-je ?',
     text2:
-      "J'accueille adultes et adolescents dans mon cabinet situé à Lyon 6ème, pour les accompagner dans un parcours psychanalytique, une psychothérapie de soutien ou une psychothérapie analytique.",
+      "Mon activité est supervisée par un psychanalyste de la FFDP, garantissant ainsi le respect du code déontologique. J'accueille adultes et adolescents dans mon cabinet situé à Lyon 6ème, pour les accompagner dans un parcours psychanalytique, une psychothérapie de soutien ou une psychothérapie analytique.",
     intro2: 'Mon approche thérapeutique',
     text3:
-      "Ensemble, nous explorerons votre psychisme pour dénouer les fils qui influencent vos pensées, vos émotions et vos comportements actuels. L'objectif est de vous permettre d'accéder à un mieux-être durable, en favorisant votre épanouissement personnel.",
+      "C'est dans un climat de confiance que vous pourrez explorer votre psyché en profondeur, sans crainte ni retenue. Je suis là pour vous accompagner à chaque étape de ce cheminement, en vous offrant un espace d'écoute attentive et bienveillante. Mon engagement est de vous guider avec respect, en veillant à ce que vous vous sentiez toujours à l'aise.",
     text4:
-      "Au cœur de la thérapie, une relation de confiance se tisse entre le patient et le psychanalyste. C'est dans ce climat que vous pourrez explorer votre psyché en profondeur, sans crainte ni retenue. Je suis là pour vous accompagner à chaque étape de ce cheminement, en vous offrant un espace d'écoute attentive et bienveillante. Mon engagement est de vous guider avec respect, en veillant à ce que vous vous sentiez toujours à l'aise.",
+      "Ensemble, nous explorerons votre psychisme pour dénouer les fils qui influencent vos pensées, vos émotions et vos comportements actuels. L'objectif est de vous permettre d'accéder à un mieux-être durable, en favorisant votre épanouissement personnel.",
   };
   public openedCategoryIndex: number | null = null;
   public isOpen: boolean = false;

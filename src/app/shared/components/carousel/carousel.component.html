@@ -1,8 +1,8 @@
-<div class="carousel h-screen md:h-full bg-[#9ca48d60]">
+<div class="carousel h-full md:h-full bg-[#9ca48d60]">
   <div class="carousel-viewport">
     <div class="carousel-inner" [style.transform]="getTransform()">
       <div class="carousel-item" *ngFor="let item of items">
-        <img [src]="item.image" alt="Slide" class="object-cover md:object-fill">
+        <img [src]="item.image" alt="Slide" class="object-contain md:object-fill">
       </div>
     </div>
   </div>
