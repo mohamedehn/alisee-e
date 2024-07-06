@@ -1,13 +1,16 @@
-<section class="z-[1000] h-20 fixed w-full flex bg-[#9CA48D] px-10 text-black items-center justify-between">
-  <a href="#home" class="flex max-w-80 w-full">
-    <div class="flex items-center headerName text-4xl">
-      {{headerName}}
+<section class="z-[1000] h-20 fixed w-full flex bg-[#9CA48D] px-5 md:px-10 text-black items-center justify-between">
+  <a href="#home" class="bloc md:flex max-w-[28rem] items-center w-full gap-3 h-full">
+    <div class="flex w-full h-full items-center gap-2">
+      <div class="flex items-center headerName text-xl md:text-4xl h-full">
+        {{headerName}}
+      </div>
+      <span class="text-sm md:text-base font-normal h-full items-center self-center flex pt-1 md:pt-2"> - Psychanalyste à Lyon</span>
     </div>
   </a>
   <div class="hidden xl:flex items-center h-full text-lg font-semibold justify-end w-full">
     <div class="flex items-center h-full gap-6">
       <ng-container *ngFor="let element of navElements">
-        <a href="{{element.link}}" class="hover:text-white">{{ element.name }}</a>
+        <a href="{{element.link}}" class="hover:underline underline-offset-4">{{ element.name }}</a>
       </ng-container>
     </div>
   </div>
@@ -30,7 +33,7 @@
   </div>
   <div class="flex flex-col items-center gap-6 mt-10">
     <ng-container *ngFor="let element of navElements">
-      <a href="{{element.link}}" class="text-lg font-semibold hover:text-white" (click)="toggleMenu()">{{ element.name }}</a>
+      <a href="{{element.link}}" class="text-lg font-semibold hover:underline underline-offset-4" (click)="toggleMenu()">{{ element.name }}</a>
     </ng-container>
   </div>
 </div>

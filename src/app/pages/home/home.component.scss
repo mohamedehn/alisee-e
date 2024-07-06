@@ -1,3 +1,11 @@
+.intro {
+  font-size: 27px;
+  line-height: 34px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
 
 .iew-base {
   width: 100% !important;

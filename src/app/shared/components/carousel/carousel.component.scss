@@ -1,45 +1,9 @@
 .carousel {
-  .carousel-text {
-    position: absolute;
-    background-color: #00000080;
-    width: 368px;
-    top: 59px;
-    right: 43px;
-    height: 124px;
-    color: #FFFFFF;
-    display: block;
-
-    @media (max-width: 768px) {
-      width: 100%;
-      top: 0;
-      right: 0;
-      height: auto;
-    }
-
-    p,
-    h2 {
-      justify-content: center;
-      display: flex;
-      padding-left: 32px;
-      padding-right: 32px;
-      margin: 0;
-    }
-
-    p {
-      padding-top: 10px;
-      font-size: 14px;
-    }
-
-    h2 {
-      padding-top: 15px;
-      font-size: 20px;
-    }
-  }
-
   position: relative;
   overflow: hidden;
   width: 100%;
   z-index: 10;
+  // height: 800px;
 
   .carousel-viewport {
     width: 100%;
@@ -50,7 +14,7 @@
 
   .carousel-inner {
     display: inline-flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.85s ease;
     height: 100%;
     width: 100%;
   }
