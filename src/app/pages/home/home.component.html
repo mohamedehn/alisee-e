@@ -19,35 +19,35 @@
   <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full w-full bloc lg:flex lg:flex-col pb-20"
        id="therapy">
     <div class="mx-auto text-center h-full">
-      <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-20">{{therapy.title}}</h2>
       <div class="mt-8 text-base leading-8 text-justify bloc lg:flex gap-10 justify-center lg:grid-cols-2">
-        <div class="w-full bg-[#474747a3] m-auto flex flex-col gap-3">
-          <p class="an-1 text-justify text-white mx-4 my-4">
+        <div class="w-full bg-[#47474775] m-auto flex flex-col gap-3">
+          <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-12 flex justify-center">{{therapy.title}}</h2>
+          <p class="an-1 text-justify text-black mx-4 my-4">
             {{therapy.intro}}
           </p>
-          <p class="an-1 text-justify text-white mx-4 my-4">
+          <p class="an-1 text-justify text-black mx-4 my-4">
             Pour ma part, je vous propose trois types d’accompagnement différents : la <span class="font-bold">psychanalyse</span>,
             la <span class="font-bold">psychothérapie de soutien </span>et la <span class="font-bold">psychothérapie analytique</span>.
           </p>
           <div class="w-full h-full">
-            <div *ngFor="let category of therapy.categories; let i = index" class="flex justify-center flex-col items-center">
-              <div class="cursor-pointer flex gap-3 bg-[#9ca48db6] text-[#474747] mt-2 lg:w-80 w-full items-center h-10 mb-4 lg:ml-4 justify-between" (click)="toggleDropDown(i)">
-                <h4 class="flex an-1 text-justify justify-center mx-4 my-4 font-medium">
+            <div *ngFor="let category of therapy.categories; let i = index" class="flex justify-center flex-col">
+              <div class="cursor-pointer flex gap-4 text-black mt-2 lg:w-80 w-full items-center h-10 mb-4 lg:ml-4" (click)="toggleDropDown(i)">
+                <span class="material-symbols-outlined">
+                  {{ openedCategoryIndex === i ? 'remove' : 'add' }}
+                </span>
+                <h4 class="flex an-1 text-justify justify-center mx-4 my-4">
                   {{category.title}}
                 </h4>
-                <span class="material-symbols-outlined">
-                  {{ openedCategoryIndex === i ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}
-                </span>
               </div>
               <div class="transition-opacity duration-500 ease-in-out" [ngClass]="{'hidden': openedCategoryIndex !== i, 'block': openedCategoryIndex === i}">
-                <p class="an-1 text-justify text-white mx-4 my-4" [ngClass]="{'fade-in': openedCategoryIndex === i}">
+                <p class="an-1 text-justify text-black mx-4 my-2" [ngClass]="{'fade-in': openedCategoryIndex === i}">
                   {{category.text}}
                 </p>
               </div>
             </div>
-          <div class="border-dashed border flex m-auto w-1/2 mt-2"></div>
+          <div class="border border-[#9ca48db6] flex m-auto w-1/2 mt-2"></div>
           </div>
-          <p class="an-1 text-justify text-white mx-4 my-4">
+          <p class="an-1 text-justify text-black mx-4 my-4">
             {{therapy.conclusion}}
           </p>
         </div>
