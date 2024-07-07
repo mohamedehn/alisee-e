@@ -1,13 +1,13 @@
 <section class="lg:flex lg:flex-col bloc w-full h-full z-10">
   <!-- Header -->
-  <div class="flex w-full h-screen justify-center items-center pb-20 bg-[#9CA48D]"
+  <div class="flex w-full h-svh md:h-screen justify-center items-center md:pb-20 bg-[#9CA48D]"
        id="home">
     <div class="md:pt-0 md:pb-0 pb-28 flex flex-col justify-center items-center w-full h-full">
-      <div class="absolute h-full bottom-0 z-10 opacity-90 flex flex-col items-center justify-center gap-4">
-        <h2 class="an-1 text-4xl md:text-6xl font-bold tracking-tight headerName">{{name}}</h2>
-        <h3 class="an-1 text-xl font-medium">{{introduction}}</h3>
+      <div class="absolute h-full md:bottom-0 z-10 opacity-90 flex flex-col items-center justify-center gap-4 pt-28 md:pt-0">
+        <h2 class="an-1 text-4xl md:text-7xl tracking-tight headerName">{{name}}</h2>
+        <h3 class="an-1 intro">{{introduction}}</h3>
       </div>
-      <div class="h-full flex flex-col z-1 opacity-60">
+      <div class="h-full flex flex-col z-1 opacity-50">
         <div class="mx-auto text-center h-full">
           <app-carousel [items]="carouselItems"></app-carousel>
          </div>
@@ -19,31 +19,35 @@
   <div class="px-6 lg:px-8 bg-[#9ca48d60] h-full w-full bloc lg:flex lg:flex-col pb-20"
        id="therapy">
     <div class="mx-auto text-center h-full">
-      <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-20">{{therapy.title}}</h2>
-      <div class="mt-8 text-lg leading-8 text-justify bloc lg:flex gap-10 justify-center lg:grid-cols-2">
-        <div class="w-full bg-[#474747a3] m-auto flex flex-col gap-3">
-          <p class="an-1 text-justify text-white mx-4 my-4">
+      <div class="mt-8 text-base leading-8 text-justify bloc lg:flex gap-10 justify-center lg:grid-cols-2">
+        <div class="w-full bg-[#47474775] m-auto flex flex-col gap-3">
+          <h2 class="an-1 text-2xl lg:mt-0 font-bold tracking-tight sm:text-3xl pt-12 flex justify-center">{{therapy.title}}</h2>
+          <p class="an-1 text-justify text-black mx-4 my-4">
             {{therapy.intro}}
           </p>
+          <p class="an-1 text-justify text-black mx-4 my-4">
+            Pour ma part, je vous propose trois types d’accompagnement différents : la <span class="font-bold">psychanalyse</span>,
+            la <span class="font-bold">psychothérapie de soutien </span>et la <span class="font-bold">psychothérapie analytique</span>.
+          </p>
           <div class="w-full h-full">
-            <div *ngFor="let category of therapy.categories; let i = index" class="flex justify-center flex-col items-center">
-              <div class="cursor-pointer flex gap-3 bg-[#9ca48db6] text-[#474747] mt-2 lg:w-80 w-full items-center h-10 mb-4 lg:ml-4 justify-between" (click)="toggleDropDown(i)">
-                <h4 class="flex an-1 text-justify justify-center mx-4 my-4 font-medium">
+            <div *ngFor="let category of therapy.categories; let i = index" class="flex justify-center flex-col">
+              <div class="cursor-pointer flex gap-4 text-black mt-2 lg:w-80 w-full items-center h-10 mb-4 lg:ml-4" (click)="toggleDropDown(i)">
+                <span class="material-symbols-outlined">
+                  {{ openedCategoryIndex === i ? 'remove' : 'add' }}
+                </span>
+                <h4 class="flex an-1 text-justify justify-center mx-4 my-4">
                   {{category.title}}
                 </h4>
-                <span class="material-symbols-outlined">
-                  {{ openedCategoryIndex === i ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}
-                </span>
               </div>
-              <div class="transition-opacity duration-500 ease-in-out" [ngClass]="{'hidden': openedCategoryIndex !== i, 'block': openedCategoryIndex === i}">
-                <p class="an-1 text-justify text-white mx-4 my-4" [ngClass]="{'fade-in': openedCategoryIndex === i}">
+              <div class="transition-all duration-[1200ms] ease-in-out overflow-hidden" [ngClass]="{'max-h-0 opacity-0': openedCategoryIndex !== i, 'max-h-screen opacity-100': openedCategoryIndex === i}">
+                <p class="an-1 text-justify text-black mx-4 my-2">
                   {{category.text}}
                 </p>
               </div>
             </div>
-
+          <div class="border border-[#9ca48db6] flex m-auto w-1/2 mt-2"></div>
           </div>
-          <p class="an-1 text-justify text-white mx-4 my-4">
+          <p class="an-1 text-justify text-black mx-4 my-4">
             {{therapy.conclusion}}
           </p>
         </div>
@@ -52,14 +56,14 @@
   </div>
 
   <!-- Therapyst -->
-  <div class="lg:py-16 px-6 lg:px-8 bg-[#9ca48d96] h-full pt-20 md:pt-0 lg:flex lg:flex-col justify-center"
+  <div class="lg:py-16 px-6 lg:px-8 bg-[#9ca48d96] lg:screen h-full pt-20 md:pt-0 lg:flex lg:flex-col justify-center"
        id="psy">
     <div class="mx-auto max-w-8xl text-center bg-[#F0ECE9] h-full">
     <div class="flex flex-col w-full h-full">
       <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl pt-5">{{therapyst}}</h2>
-      <div class="h-full text-lg leading-8 text-justify bloc lg:flex gap-5 justify-center w-full mt-2">
-        <div class="items-start lg:grid-cols-2 flex h-full lg:flex-row flex-col w-full lg:w-2/3 rounded-xl">
-          <div class="lg:w-[47%] flex flex-col h-full flex-1">
+      <div class="h-full m-auto text-base leading-8 text-justify bloc lg:flex gap-4 justify-center w-full mt-2">
+        <div class="lg:ml-4 mt-5 items-start lg:grid-cols-2 flex h-full lg:flex-row flex-col w-full lg:w-2/3 rounded-xl gap-4">
+          <div class="lg:w-1/2 flex flex-col h-full flex-1">
             <p class="an-1 text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro1}}</p>
             <div>
               <p class="an-1 text-justify text-[#596551] mx-4 my-4">
@@ -72,18 +76,18 @@
               <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text2}}</p>
             </div>
           </div>
-          <div class="lg:w-[53%] flex flex-col h-full flex-1">
+          <div class="lg:w-1/2 flex flex-col h-full flex-1">
             <p class="an-1 text-justify text-[#596551] mx-4 my-4 text-xl font-bold">{{therapystInfos.intro2}}</p>
             <div>
-              <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text4}}</p>
               <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text3}}</p>
+              <p class="an-1 text-justify text-[#596551] mx-4 my-4">{{therapystInfos.text4}}</p>
             </div>
           </div>
         </div>
-        <div class="w-[90%] lg:w-1/3 h-full flex items-center m-auto pb-10 lg:pb-0">
+        <div class="w-[90%] lg:w-1/3 h-full flex items-center m-auto pb-10 lg:pb-0 lg:mx-4 lg:my-4 self-center">
           <img src="{{aliseeImg}}"
                alt="alisée"
-               class="pr-3">
+               >
         </div>
       </div>
     </div>
@@ -95,7 +99,7 @@
        id="infos">
     <div class="mx-auto max-w-8xl text-center h-full lg:pt-20">
       <h2 class="an-1 text-2xl font-bold tracking-tight sm:text-3xl pt-10 lg:pt-0">{{info}}</h2>
-      <div class="text-lg leading-8 text-justify bloc lg:flex gap-10 justify-center max-w-8xl m-auto mt-12">
+      <div class="text-base leading-8 text-justify bloc lg:flex gap-10 justify-center max-w-8xl m-auto mt-12">
         <div class="an-1 w-full lg:w-1/2 m-auto z-1 flex justify-center items-center">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.1640674517057!2d4.8476745!3d45.7679021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb150e31e24b%3A0x25dca6ac81c8dab5!2sAlis%C3%A9e%20Eggermont!5e0!3m2!1sfr!2sfr!4v1719434135950!5m2!1sfr!2sfr"
                   width="600"
@@ -148,6 +152,27 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="flex flex-col w-full h-full max-h-screen bg-[#9CA48D] items-center" id="contact">
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl pt-20">
+        Prendre rendez-vous
+      </h2>
+        <app-widget></app-widget>
+      <div class="h-16 bg-[#ded9d5] max-h-16 w-full flex" id="footer">
+        <!-- TODO -->
+        <!-- <img src="assets/logo_ffdp.png" alt="" class="h-full">
+        <div id="box" class="flex justify-center h-8"><a rel="nofollow" href="https://www.psychologue.net/cabinets/alisee-eggermont?utm_source=434216&utm_medium=widget&utm_campaign=widget-company_stamp" target="_blank" ><img src="https://www.psychologue.net/stamp.xpng?com=434216&v=10" alt="Alisée EGGERMONT" class="border-0 h-full" /></a></div> -->
+        <div
+          class="sm:flex-row flex flex-col sm:flex sm:gap-8 gap-2 items-center h-full text-sm justify-between w-full px-8"
+        >
+          <span>© 2024 - Alisée Eggermont</span>
+          <div class="sm:flex-row flex flex-col sm:gap-8 gap-2">
+            <div routerLink="mentions" class="cursor-pointer"> Mentions légales </div>
+            <a href="https://www.codingcorp.fr/"> Powered by Coding Corp</a>
+          </div>
+        </div>
+      </div>
   </div>
 
 </section>

@@ -30,7 +30,7 @@ export class AnimationService {
       targets: element,
       opacity: [0, 1],
       easing: 'easeInOutQuad',
-      duration: 2100,
+      duration: 1400,
     });
   }
 }

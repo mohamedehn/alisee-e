@@ -1,32 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  background-color: #ded9d5;
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+:host{
+  display: block;
+  width: 100%;
 }
 
-html {
-  scroll-behavior: smooth;
+iframe {
+  width: 100%!important;
+  height: 600px;
+  border: none;
 }
 
-.headerName {
-  font-family: "Cormorant Infant";
-  font-weight: 400;
-  font-style: normal;
-}
-
-@layer components {
-  .max-h-0 {
-    max-height: 0;
-  }
-  .max-h-screen {
-    max-height: 100vh;
-  }
-}
 
 .iew-base {
   width: 100% !important;
