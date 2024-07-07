@@ -19,6 +19,15 @@ html {
   font-style: normal;
 }
 
+@layer components {
+  .max-h-0 {
+    max-height: 0;
+  }
+  .max-h-screen {
+    max-height: 100vh;
+  }
+}
+
 .iew-base {
   width: 100% !important;
   max-width: 100% !important;

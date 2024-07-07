@@ -39,8 +39,8 @@
                   {{category.title}}
                 </h4>
               </div>
-              <div class="transition-opacity duration-500 ease-in-out" [ngClass]="{'hidden': openedCategoryIndex !== i, 'block': openedCategoryIndex === i}">
-                <p class="an-1 text-justify text-black mx-4 my-2" [ngClass]="{'fade-in': openedCategoryIndex === i}">
+              <div class="transition-all duration-[1200ms] ease-in-out overflow-hidden" [ngClass]="{'max-h-0 opacity-0': openedCategoryIndex !== i, 'max-h-screen opacity-100': openedCategoryIndex === i}">
+                <p class="an-1 text-justify text-black mx-4 my-2">
                   {{category.text}}
                 </p>
               </div>
