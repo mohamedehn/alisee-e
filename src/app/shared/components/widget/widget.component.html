@@ -23,17 +23,30 @@
             }
 
             #iew_aw_app {
-              margin-top: 35px;
-              margin-bottom: 40px;
               display: flex;
               flex-direction: column;
               justify-content: center;
               align-items: center;
-              height: 80%;
+              height: 60px;
+              overflow: auto!important;
               margin: auto;
-              width: 80%!important;
+              width: 90%!important;
               background-color: #9CA48D;
-              max-width: -webkit-fill-available;
+            }
+
+            .iew-form {
+              overflow: auto;
+              display: flex;
+              flex-direction: column;
+            }
+
+            #req_name, #req_email, #req_phone, #population_autocomplete, #req_text {
+              padding:0!important;
+              height: 100%!important;
+            }
+
+            .iew-form-summary{
+              min-height: 30px!important;
             }
 
             @media (max-width: 768px) {
@@ -132,9 +145,10 @@
         </body>
       </html>"
     width="100%"
-    height="600"
+    height="600px"
     frameborder="0"
     scrolling="no"
-    title="planning">
+    title="planning"
+  >
   </iframe>
 </div>
